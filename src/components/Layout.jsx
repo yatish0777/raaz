@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import {
-  Bell, Bot, Building2, FileText, FolderSearch, LayoutDashboard, LogOut, Menu, Network, Radar, Search, ShieldCheck, X,
+  Bell, Bot, Building2, FileText, FolderSearch, LayoutDashboard, Menu, Network, Radar, Search, ShieldCheck, X,
 } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 import { listAlerts, search, startLiveFeed, subscribe } from '../lib/api'
@@ -65,7 +65,7 @@ function OllamaStatus() {
 }
 
 export default function Layout() {
-  const { user, logout } = useAuth()
+  const { user } = useAuth()
   const nav = useNavigate()
   const loc = useLocation()
   const unread = useUnread()
@@ -161,9 +161,6 @@ export default function Layout() {
             <div className="grid size-9 place-items-center rounded-full bg-navy-900 text-sm font-bold text-white">
               {user.name.split(' ').map((p) => p[0]).slice(0, 2).join('')}
             </div>
-            <button onClick={() => { logout(); nav('/login') }} className="rounded-lg p-2 text-ink-2 hover:bg-slate-100" title="Sign out" aria-label="Sign out">
-              <LogOut size={18} />
-            </button>
           </div>
         </header>
         <main className="flex-1 overflow-y-auto px-4 py-6 lg:px-8">

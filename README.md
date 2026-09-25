@@ -13,7 +13,7 @@ npm install
 npm run dev          # http://localhost:5173
 ```
 
-Login: any officer ID and password, then any 6-digit OTP.
+No login: the app opens straight to the dashboard as a demo analyst.
 
 Regenerate the dummy data and the NetworkX graphs (Python 3.9+; the graph step needs `pip install networkx matplotlib scipy`):
 
@@ -28,7 +28,6 @@ python scripts/generate_data.py --cases 120 --seed 7
 
 | # | Route | Screen |
 |---|---|---|
-| 1 | `/login` | Secure login (ID + password → OTP) |
 | 2 | `/` | Command dashboard: KPIs, case pipeline, NCRP complaint trend, live alerts, charts |
 | 3 | `/investigate` | New investigation: wallet input with network auto-detection, complaint details, trace settings |
 | 4 | `/analysis/:id` | Analysis progress: simulated Celery pipeline with live log |
