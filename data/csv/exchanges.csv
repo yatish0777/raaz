@@ -1,0 +1,13 @@
+﻿id,name,type,jurisdiction,fiu_ind_registered,kyc_level,cooperation,avg_response_days,networks,cases_linked,total_inr_received,known_deposit_addresses,notices_sent,notices_responded,compliance_contact
+EX01,NovaX Exchange,Indian VASP,India (Mumbai),True,Full KYC,High,3,TRON;ETH;BSC;BTC;POLYGON,11,37801857,11,4,3,lea-requests@novax.example
+EX02,Tarang Digital Assets,Indian VASP,India (Bengaluru),True,Full KYC,High,4,TRON;ETH;BSC;BTC;POLYGON,8,22872167,8,4,3,lea-requests@tarang.example
+EX03,Suryodaya Crypto,Indian VASP,India (Gurugram),True,Full KYC,Medium,7,TRON;ETH;BSC;BTC,2,6833915,3,1,1,lea-requests@suryodaya.example
+EX04,Zentra Global,Offshore Exchange,Seychelles,False,Partial KYC,Low,30,TRON;ETH;BSC;BTC;POLYGON,14,43866053,15,7,6,lea-requests@zentra.example
+EX05,Kestrel Markets,Offshore Exchange,Cayman Islands,False,Partial KYC,Medium,21,TRON;ETH;BSC;BTC;POLYGON,5,25647301,5,1,0,lea-requests@kestrel.example
+EX06,Orbitra Pro,Offshore Exchange (FIU-IND registered),UAE (Dubai),True,Full KYC,Medium,10,TRON;ETH;BSC;BTC;POLYGON,5,10570087,5,2,2,lea-requests@orbitra.example
+EX07,Halcyon Swap,Offshore Exchange,British Virgin Islands,False,Minimal KYC,Low,45,TRON;ETH;BSC;POLYGON,7,60288481,7,4,2,lea-requests@halcyon.example
+EX08,Meridian OTC Desk,OTC Desk,Hong Kong,False,Partial KYC,Low,35,TRON;ETH;BTC,3,17568998,3,0,0,lea-requests@meridian.example
+EX09,Pinecrest P2P,P2P Platform,Singapore,False,Partial KYC,Medium,18,TRON;ETH;BSC,6,81081453,6,3,2,lea-requests@pinecrest.example
+EX10,Aurum Bitmarket,Foreign Regulated Exchange,Lithuania (EU),False,Full KYC,High,9,TRON;ETH;BSC;BTC;POLYGON,0,0,0,0,0,lea-requests@aurum.example
+EX11,Lotus Chain Exchange,Unregulated Exchange,Cambodia,False,Minimal KYC,Low,,TRON;BSC,6,19195871,6,4,2,lea-requests@lotus.example
+EX12,Quasar Exchange,Foreign Regulated Exchange,Malta,False,Full KYC,Medium,14,TRON;ETH;BSC;BTC;POLYGON,4,19263276,4,3,3,lea-requests@quasar.example

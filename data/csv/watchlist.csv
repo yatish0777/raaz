@@ -1,0 +1,21 @@
+﻿address,network,case_id,label,reason,added_by,added_on,risk_score,balance,token,status
+Tg9wJGCu9kpGVEbEC7S9VaQt28djcny3vb,TRON,RAAZ-26-1004,Reported suspect wallet,Suspect wallet in Task-based Part-time Job Fraud,Insp. Gurpreet Sandhu,2026-08-08T16:29:00+05:30,67,14415.27,USDT,Active
+bc1q5566n8tqlvxfrttvuwa84zrscg7wrparfme5ch,BTC,RAAZ-26-1019,Reported suspect wallet,Suspect wallet in Task-based Part-time Job Fraud,Insp. Rohit Verma,2026-09-22T14:58:00+05:30,61,0.059695,BTC,Active
+0xe428c7ef4a63114041287a7cef5b76d5722d21cc,ETH,RAAZ-26-1012,Reported suspect wallet,Suspect wallet in Investment / Trading App Fraud,DSP Kavitha Raman,2026-09-11T18:50:00+05:30,54,0.07738,ETH,Active
+T9zeWawhUNEzQq7xDU7oes4P5N3FXoDUr2,TRON,RAAZ-26-1015,Reported suspect wallet,Suspect wallet in Investment / Trading App Fraud,SI Arjun Rathore,2026-09-13T07:11:00+05:30,51,191.59,USDT,Active
+TeXY9z3tm5qWJMx7vfLp16dPZZK1eXX6vz,TRON,RAAZ-26-1028,Reported suspect wallet,Suspect wallet in Task-based Part-time Job Fraud,SI Farhan Qureshi,2026-08-20T06:06:00+05:30,43,5450.46,USDT,Active
+0x8597567d00d23b78fbf0a25234df03060e145624,ETH,RAAZ-26-1049,Reported suspect wallet,Suspect wallet in Task-based Part-time Job Fraud,Insp. Priya Deshmukh,2026-09-09T10:54:00+05:30,88,5233.66,USDC,Active
+TAiiRhFnQ1MXkU3zyEGteyDMxfCWK4uEZu,TRON,RAAZ-26-1039,Reported suspect wallet,Suspect wallet in Loan App Extortion,Insp. Priya Deshmukh,2026-07-26T14:03:00+05:30,68,1513.62,USDT,Active
+TBBzYbZPCxDqvAmFZNnvDJKE5hu95VPrmd,TRON,RAAZ-26-1020,Reported suspect wallet,Suspect wallet in Task-based Part-time Job Fraud,Insp. Gurpreet Sandhu,2026-09-22T19:35:00+05:30,54,91.54,USDT,Active
+0x54000f712c346eecb3027209b0fa76ec2a819ee8,ETH,RAAZ-26-1047,Reported suspect wallet,Suspect wallet in Investment / Trading App Fraud,SI Farhan Qureshi,2026-09-07T21:26:00+05:30,62,0.06078,ETH,Active
+bc1qggpfqfclkvwyl8dk0nsr8eaq5maphz4pwpq0qd,BTC,RAAZ-26-1018,Reported suspect wallet,Suspect wallet in Loan App Extortion,Insp. Priya Deshmukh,2026-09-24T08:26:00+05:30,70,0.000765,BTC,Active
+0xb3b9454cdb2740445389df892df254b5a0ecc021,POLYGON,RAAZ-26-1052,Reported suspect wallet,Suspect wallet in Task-based Part-time Job Fraud,SI Farhan Qureshi,2026-09-21T03:29:00+05:30,63,11819.18,POL,Active
+TqDi6hv7LX7Sqhsn4kvtg4gF4buzHyu9Sk,TRON,RAAZ-26-1054,Reported suspect wallet,Suspect wallet in Task-based Part-time Job Fraud,DSP Kavitha Raman,2026-09-23T07:37:00+05:30,73,87.82,USDT,Active
+0xe3b4abfbeda5737748964df3cf0c36b1b1d9c474,POLYGON,RAAZ-26-1045,Reported suspect wallet,Suspect wallet in Task-based Part-time Job Fraud,Insp. Gurpreet Sandhu,2026-09-14T11:59:00+05:30,61,4604.2,USDT,Active
+0xef6f9877f1034f442cdbc8e7e209010167c5c802,BSC,RAAZ-26-1060,Reported suspect wallet,Suspect wallet in Investment / Trading App Fraud,DSP Kavitha Raman,2026-09-13T16:09:00+05:30,50,281.26,USDT,Active
+T7gMqk5qdM6FMUF86paWPeVBRur7v6E3HJ,TRON,RAAZ-26-1029,Reported suspect wallet,Suspect wallet in Ponzi / MLM Token Scheme,SI Farhan Qureshi,2026-09-09T07:07:00+05:30,53,12.05,USDT,Active
+T5DTbLhX7viBZeYAHJ9L3EFfMUr6K65jjk,TRON,RAAZ-26-1038,Reported suspect wallet,Suspect wallet in Investment / Trading App Fraud,SI Farhan Qureshi,2026-08-21T02:46:00+05:30,57,51.61,USDT,Active
+TaJXqcRHSmfSNjNFNsY7WfGZgnjoyP3vkT,TRON,RAAZ-26-1007,Consolidation wallet (Syndicate A),Shared across 5 cases - syndicate cash-out hub,Ananya Sharma,2026-06-12T08:00:00+05:30,97,96.75,USDT,Active
+TaXJKCK9ovAdBPusifBMZffqGgWqouRt8m,TRON,RAAZ-26-1003,Consolidation wallet (Syndicate B),Shared across 8 cases - syndicate cash-out hub,Ananya Sharma,2026-06-09T03:08:00+05:30,84,136.49,USDT,Active
+0x7d97e08c1b728e877573edec907db4a7969187e9,BSC,RAAZ-26-1017,Consolidation wallet (Syndicate C),Shared across 6 cases - syndicate cash-out hub,Ananya Sharma,2026-07-05T06:53:00+05:30,96,0.2921,BNB,Active
+0x89686d90de06a6be63ca602cdab6765c4504c519,ETH,RAAZ-26-1010,Consolidation wallet (Syndicate D),Shared across 4 cases - syndicate cash-out hub,Ananya Sharma,2026-07-25T23:00:00+05:30,74,18659.44,USDT,Active
