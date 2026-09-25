@@ -107,19 +107,26 @@ def analyse_case(d):
             H.add_edge(u, v, capacity=a["value_inr"])
         for dep in deposits:
             H.add_edge(dep, "__EXCHANGES__")  # no capacity attr = infinite
-        max_flow_inr, fd = nx.maximum_flow(H, suspect, "__EXCHANGES__", capacity="capacity")
+        # edmonds_karp (BFS over insertion-ordered adjacency) gives the same edge-level flow every run;
+        # the default preflow_push can split an equally-valid max flow differently between runs
+        max_flow_inr, fd = nx.maximum_flow(H, suspect, "__EXCHANGES__", capacity="capacity",
+                                           flow_func=nx.algorithms.flow.edmonds_karp)
         flow_edges = {(u, v): f for u, vs in fd.items() for v, f in vs.items() if f > 0 and v != "__EXCHANGES__"}
 
     # --- communities (Louvain on the undirected, value-weighted graph) --------
     comms = nx.community.louvain_communities(G.to_undirected(), weight="value_inr", seed=SEED)
-    comms = sorted(comms, key=len, reverse=True)
+    comms = sorted(comms, key=lambda c: (-len(c), min(c)))  # tie-break so numbering is reproducible
     community_of = {n: i for i, c in enumerate(comms) for n in c}
     modularity = nx.community.modularity(G.to_undirected(), comms, weight="value_inr")
 
     # --- layouts ------------------------------------------------------------
+    # multipartite_layout iterates a set internally, so its output changes with PYTHONHASHSEED.
+    # Passing an explicit {layer: [nodes]} mapping with a fixed sort keeps the layout reproducible.
+    layers = defaultdict(list)
     for n, a in G.nodes(data=True):
-        a["layer"] = a["hop"] + 1
-    pos_layers = norm_pos(nx.multipartite_layout(G, subset_key="layer", align="vertical"))
+        layers[a["hop"] + 1].append(n)
+    layers = {k: sorted(v, key=lambda n: (G.nodes[n]["role"], n)) for k, v in sorted(layers.items())}
+    pos_layers = norm_pos(nx.multipartite_layout(G, subset_key=layers, align="vertical"))
     pos_spring = norm_pos(nx.spring_layout(G, seed=SEED, k=0.9, iterations=200, weight=None))
     pos_kk = norm_pos(nx.kamada_kawai_layout(G.to_undirected()))
 
@@ -228,7 +235,7 @@ def main():
             else:
                 C.add_edge(a, b, weight=1, wallets=[w])
 
-    groups = sorted((g for g in nx.connected_components(C) if len(g) > 1), key=len, reverse=True)
+    groups = sorted((g for g in nx.connected_components(C) if len(g) > 1), key=lambda g: (-len(g), min(g)))
     group_of = {n: i for i, g in enumerate(groups) for n in g}
     # layout: each linked group drawn as its own nx.circular_layout "wheel" side by side (groups are
     # cliques, so a spring layout would collapse them); unlinked cases sit in a grid strip below
@@ -237,12 +244,12 @@ def main():
     for i, grp in enumerate(groups):
         cx = (i + 0.5) / ng
         rad = 0.05 + 0.02 * len(grp) ** 0.5
-        for n, (x, y) in nx.circular_layout(C.subgraph(grp), scale=rad).items():
-            pos[n] = (cx + x, 0.62 + y * 1.6)
+        for n, (x, y) in nx.circular_layout(sorted(grp), scale=rad).items():  # sorted list: set order varies per run
+            pos[n] = (cx + x, 0.62 + y * 1.3)
     isolates = sorted(n for n in C.nodes if n not in group_of)
     cols = 19
     for j, n in enumerate(isolates):
-        pos[n] = ((j % cols + 0.5) / cols, 0.12 - (j // cols) * 0.09)
+        pos[n] = ((j % cols + 0.5) / cols, 0.24 - (j // cols) * 0.09)
     pos = norm_pos(pos)
     # exchanges shared across cases (infrastructure) - for the "who receives most" view
     hot_in = defaultdict(set)

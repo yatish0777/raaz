@@ -262,7 +262,7 @@ export default function ReportView() {
               <p><b>Subject:</b> Production of KYC and transaction records, and freezing of account(s) linked to the deposit address(es) below - Case {c.id} / NCRP Ack. {c.ncrp_ack}.</p>
               <p>Sir / Madam,</p>
               <p>
-                This office is investigating a complaint of {c.fraud_type.toLowerCase()} registered on the National Cyber Crime Reporting Portal (Ack. No. {c.ncrp_ack}) from {c.district}, {c.state}.
+                This office is investigating a complaint of {c.fraud_type} registered on the National Cyber Crime Reporting Portal (Ack. No. {c.ncrp_ack}) from {c.district}, {c.state}.
                 The complainant lost {inr(c.amount_lost_inr)}, which was transferred as {c.token} on the {NETWORKS[c.network].name} network. Blockchain analysis shows that {inr(n0.amount_inr)} of the traced funds
                 was deposited to the following address(es), which your platform controls:
               </p>

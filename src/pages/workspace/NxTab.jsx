@@ -34,8 +34,12 @@ export default function NxTab({ d }) {
 
   return (
     <div className="space-y-5">
-      <div className="flex flex-wrap items-center gap-2 rounded-lg bg-brand-50 px-4 py-2.5 text-sm text-brand-700">
-        <Network size={16} /> This graph was built and analysed in Python with <b>NetworkX</b> (<code className="font-mono text-xs">scripts/networkx_graph.py</code>). The layouts, centrality, paths, max-flow and communities below all come from NetworkX.
+      <div className="flex items-start gap-2 rounded-lg bg-brand-50 px-4 py-2.5 text-sm text-brand-700">
+        <Network size={16} className="mt-0.5 shrink-0" />
+        <span>
+          This graph was built and analysed in Python with <b>NetworkX</b> (<code className="font-mono text-xs">scripts/networkx_graph.py</code>).
+          The layouts, centrality, paths, max-flow and communities below all come from NetworkX.
+        </span>
       </div>
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-4 xl:grid-cols-7">

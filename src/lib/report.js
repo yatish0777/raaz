@@ -68,7 +68,7 @@ export function templateNarrative(f) {
   const lines = []
   lines.push('### Executive Summary')
   lines.push(
-    `On ${f.reported_on}, a complaint (NCRP Ack. ${f.ncrp_ack}) was registered from ${f.location} relating to ${f.fraud_type.toLowerCase()}. ` +
+    `On ${f.reported_on}, a complaint (NCRP Ack. ${f.ncrp_ack}) was registered from ${f.location} relating to ${f.fraud_type}. ` +
       `The complainant transferred ${f.amount_lost} in ${f.victim_payments} payment(s) of ${f.token} on the ${f.network} network to the reported wallet ${f.reported_wallet}. ` +
       `RAAZ traced ${f.wallets_traced} wallets and ${f.transactions_traced} transactions up to ${f.max_hop_depth} hops. ` +
       (n
@@ -79,7 +79,7 @@ export function templateNarrative(f) {
   lines.push(
     `The reported wallet received ${f.total_inflow_to_reported_wallet} in total, including inflows from other unattributed sources. ` +
       `Funds were then moved through a layering structure showing ${pats.length ? pats.join(', ') : 'simple forwarding'}. ` +
-      `The overall risk score is ${f.risk}, driven mainly by: ${f.top_risk_factors.slice(0, 3).join('; ').toLowerCase()}.`,
+      `The overall risk score is ${f.risk}, driven mainly by: ${f.top_risk_factors.slice(0, 3).join('; ')}.`,
   )
   if (f.syndicate) lines.push(`The consolidation wallet is shared with ${f.linked_cases.length} other case(s) (${f.linked_cases.join(', ')}), indicating the same operator group (${f.syndicate}).`)
   lines.push('### Basis for Exchange Attribution')

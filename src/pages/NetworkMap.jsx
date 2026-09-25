@@ -8,7 +8,7 @@ import { CATEGORICAL } from '../components/NxGraphView'
 import { RoleGlyph } from '../components/TxGraph'
 
 const W = 1000
-const H = 620
+const H = 560
 const PAD = 40
 
 export default function NetworkMap() {

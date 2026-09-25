@@ -95,7 +95,7 @@ export default function Dashboard() {
             labels={daily.map((d) => new Date(d.date).toLocaleDateString('en-IN', { day: '2-digit', month: 'short' }))}
             values={daily.map((d) => d.complaints)}
             format={(v) => num(v)}
-            height={250}
+            height={300}
           />
           <div className="mt-3 grid grid-cols-3 gap-3 border-t border-line pt-3 text-center">
             <div><div className="text-xs text-ink-3">Wallets traced ({range}d)</div><div className="font-bold text-navy-900">{num(daily.reduce((s, d) => s + d.wallets_traced, 0))}</div></div>
@@ -106,7 +106,7 @@ export default function Dashboard() {
 
         <Card title="Live alerts" subtitle="Watchlisted wallets" action={<Link to="/watchlist" className={btn.ghost}>View all <ArrowRight size={14} /></Link>} pad={false}>
           <ul className="divide-y divide-line">
-            {alerts.slice(0, 6).map((a) => (
+            {alerts.slice(0, 4).map((a) => (
               <li key={a.id} className={`px-5 py-3 ${a.live ? 'slide-in bg-brand-50/50' : ''}`}>
                 <div className="flex items-center justify-between gap-2">
                   <RiskBadge level={a.severity} />
