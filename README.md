@@ -1,4 +1,4 @@
-# RAAZ - Automated Anti-Fraud Analysis
+# RAAZ - RAPID AUTOMATED ANTI FRAUD ANALYSIS
 
 **SIH26183** - Real-time identification of fraud-linked cryptocurrency exchanges from victim-reported suspect wallet addresses through automated blockchain analytics.
 
